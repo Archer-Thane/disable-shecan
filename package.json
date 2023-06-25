@@ -1,6 +1,6 @@
 {
   "name": "enable-shecan",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Automatically update the resolv.conf of ubuntu servers to have shecan set, with a single command",
   "main": "shecan.js",
   "bin": {
