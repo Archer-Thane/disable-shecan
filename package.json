@@ -1,0 +1,19 @@
+{
+  "name": "enable-shecan",
+  "version": "1.0.5",
+  "description": "Automatically update the resolv.conf of ubuntu servers to have shecan set, with a single command",
+  "main": "shecan.js",
+  "bin": {
+    "enable-shecan": "./shecan.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Archer-Thane/enable-shecan.git"
+  },
+  "type": "module",
+  "author": "Ali Bahrami Ehsan",
+  "license": "ISC",
+  "dependencies": {
+    "ora": "^6.3.1"
+  }
+}
