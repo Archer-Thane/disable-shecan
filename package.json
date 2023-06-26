@@ -1,14 +1,14 @@
 {
-  "name": "enable-shecan",
+  "name": "disable-shecan",
   "version": "1.0.6",
-  "description": "Automatically update the resolv.conf of ubuntu servers to have shecan set, with a single command",
+  "description": "Automatically remove the resolv.conf of ubuntu servers to have shecan set, with a single command",
   "main": "shecan.js",
   "bin": {
-    "enable-shecan": "./shecan.js"
+    "disable-shecan": "./shecan.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Archer-Thane/enable-shecan.git"
+    "url": "https://github.com/Archer-Thane/disable-shecan.git"
   },
   "type": "module",
   "author": "Ali Bahrami Ehsan",

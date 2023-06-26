@@ -39,25 +39,28 @@ switch (platform) {
     break;
 }
 
-spinner.text = "Adding shecan to " + resolvConfPath + "...";
+spinner.text = "Removing shecan from " + resolvConfPath + "...";
 
 try {
   let resolvConf = fs.readFileSync(resolvConfPath, "utf8");
   spinner.text = "Successfully read existing " + resolvConfPath + ".";
 
   let needToUpdateResolvConf = false;
-  for (const ns of nameservers) {
-    if (!resolvConf.includes(ns)) {
-      needToUpdateResolvConf = true;
-      break;
+  let updatedResolvConfLines = resolvConf.split("\n").filter((line) => {
+    for (const ns of nameservers) {
+      if (line === ns) {
+        needToUpdateResolvConf = true;
+        return false;
+      }
     }
-  }
+    return true;
+  });
 
   if (needToUpdateResolvConf) {
     spinner.text = "Updating " + resolvConfPath + "...";
-    resolvConf = nameservers.join("\n") + "\n" + resolvConf;
-    fs.writeFileSync(resolvConfPath, resolvConf);
-    spinner.succeed("Successfully added shecan to " + resolvConfPath + ".");
+    let updatedResolvConf = updatedResolvConfLines.join("\n");
+    fs.writeFileSync(resolvConfPath, updatedResolvConf);
+    spinner.succeed("Successfully removed shecan from " + resolvConfPath + ".");
   } else {
     spinner.info(resolvConfPath + " is already up to date. No changes made.");
   }
