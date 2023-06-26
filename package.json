@@ -1,6 +1,6 @@
 {
   "name": "disable-shecan",
-  "version": "1.0.6",
+  "version": "1.0.2",
   "description": "Automatically remove the resolv.conf of ubuntu servers to have shecan set, with a single command",
   "main": "shecan.js",
   "bin": {

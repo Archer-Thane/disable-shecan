@@ -3,9 +3,9 @@
 ![npm](https://img.shields.io/npm/v/disable-shecan)
 ![license](https://img.shields.io/npm/l/disable-shecan)
 
-Automatically remove the `resolv.conf` of Ubuntu servers to have Shecan set, with a single command.
+Automatically remove Shecan configuration, from the `resolv.conf` of Ubuntu servers, with a single command.
 
-✨ For adding shecan automatically, please see [enable-shecan](https://www.npmjs.com/package/enable-shecan)
+✨ For adding shecan automatically, please see [enable-shecan](https://www.npmjs.com/package/enable-shecan) <br />
 ⌨️ Execute `sudo disable-shecan` to remove shecan from `resolv.conf` file! <br />
 ⚠️ Please note that this module works only with Ubuntu servers, and need sudo permissions.<br />
 
